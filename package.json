@@ -4,8 +4,8 @@
   "description": "hjs的webpack",
   "main": "index.js",
   "scripts": {
-    "myBuild": "rimraf dist && webpack --config webpack.config.js",
-    "devServer": "webpack-dev-server --config webpack.config.js"
+    "myBuild": "rimraf dist && webpack --config build/webpack.prod.js",
+    "devServer": "webpack-dev-server --config build/webpack.dev.js"
   },
   "author": "",
   "license": "ISC",
