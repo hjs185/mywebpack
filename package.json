@@ -4,7 +4,7 @@
   "description": "hjs的webpack",
   "main": "index.js",
   "scripts": {
-    "mybuild": "rimraf dist && webpack --config build/webpack.prod.js",
+    "mybuild": "rimraf dist &&  webpack --config build/webpack.prod.js",
     "mydev": "webpack-dev-server --config build/webpack.dev.js"
   },
   "author": "",
@@ -15,7 +15,8 @@
     "@babel/cli": "7.0.0",
     "@babel/core": "7.0.0",
     "@babel/preset-env": "7.12.1",
-    "@babel/polyfill": "7.12.1",
+    "@babel/polyfill": "7.10.1",
+    "babel-loader": "7.1.5",
     "html-webpack-plugin": "4.0.3",
     "webpack-dev-server": "3.3.1",
     "glob": "7.1.6"

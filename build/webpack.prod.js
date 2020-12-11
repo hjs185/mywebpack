@@ -12,6 +12,7 @@ const out_path = path.resolve(__dirname, "../dist/index.js");
 const templateHTML = path.resolve(__dirname, "../hjs.html");
 const HtmlWbpackPlugin = require("html-webpack-plugin");
 module.exports = merge(commonConfig, {
+  mode: "production",
   output: {
     path: out_path,
     // name chunkhash 为关键字 详情看webpack文档

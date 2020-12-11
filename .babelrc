@@ -3,15 +3,16 @@
     [
       "@babel/preset-env",
       {
+        // "modules": true,
         // polyfill通过useBuiltIns按需引入
         "useBuiltIns": "usage",
         // 必须声明corejs版本 否则babel将无效
         "corejs": "2"
+        // "targets": "ie >= 8"
       }
     ]
   ]
 }
-
 
 
 
