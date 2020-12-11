@@ -44,7 +44,9 @@ module.exports = {
   plugins: [
     // 打包的模板文件
     new HtmlWbpackPlugin({
+      // 要打包的路径
       template: templateHTML,
+      // 打包的文件名
       filename: "hjs_build.html"
     })
   ],
