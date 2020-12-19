@@ -8,7 +8,7 @@ let arr = [
   }
 ];
 
-import { str } from "./common";
+import { str } from "./testFile";
 let upArr = arr.map(item => item.name);
 let fun = () => "1111哈哈哈";
 console.log(upArr);

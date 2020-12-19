@@ -12,6 +12,11 @@ srcPathFiles.forEach(item => {
   entrys[item.split("/").pop().split(".")[0]] = item;
 });
 
+// 配置出口文件路径
+const out_path = path.resolve(__dirname, "../dist");
 module.exports = {
-  entry: entrys
+  entry: entrys,
+  output: {
+    path: out_path
+  }
 };

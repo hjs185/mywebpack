@@ -1,6 +1,4 @@
-// 功能： 1、启动一个服务
-
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const path = require("path");
 
 // 配置公共config文件
@@ -9,6 +7,9 @@ const commonConfig = require(commonPath);
 
 module.exports = merge(commonConfig, {
   mode: "development",
+  output: {
+    filename: "[name].js"
+  },
   devServer: {
     host: "localhost",
     // 是否可以查看ip

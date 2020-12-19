@@ -1,25 +1,27 @@
 {
   "name": "mywebpack",
   "version": "1.0.0",
-  "description": "hjs的webpack",
+  "description": "webpack",
   "main": "index.js",
   "scripts": {
-    "mybuild": "rimraf dist &&  webpack --config build/webpack.prod.js",
-    "mydev": "webpack-dev-server --config build/webpack.dev.js"
+    "test": "rimraf dist &&  webpack --config build/webpack.dev.js",
+    "build": "rimraf dist &&  webpack --config build/webpack.prod.js",
+    "dev": "webpack-dev-server --config build/webpack.dev.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "webpack-cli": "3.3.12",
     "webpack": "4.41.1",
-    "@babel/cli": "7.0.0",
-    "@babel/core": "7.0.0",
+    "@babel/core": "7.12.3",
     "@babel/preset-env": "7.12.1",
     "@babel/polyfill": "7.10.1",
-    "babel-loader": "7.1.5",
+    "babel-loader": "8.2.1",
     "html-webpack-plugin": "4.0.3",
     "webpack-dev-server": "3.3.1",
-    "glob": "7.1.6"
+    "glob": "7.1.6",
+    "webpack-merge": "5.7.0",
+    "path": "0.12.7"
   },
   "browserslist": [
     "> 1%",
