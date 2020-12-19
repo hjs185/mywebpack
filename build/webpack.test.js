@@ -1,7 +1,6 @@
-const path = require("path");
 const { merge } = require("webpack-merge");
+const path = require("path");
 
-// 配置公共config文件
 const commonPath = path.resolve(__dirname, "./webpack.common.js");
 const commonConfig = require(commonPath);
 
@@ -10,10 +9,9 @@ const templateHTML = path.resolve(__dirname, "../templates/dev.html");
 const HtmlWbpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(commonConfig, {
-  mode: "production",
+  mode: "development",
   output: {
-    // name chunkhash 为关键字 详情看webpack文档
-    filename: "[name].[chunkhash:8].js"
+    filename: "[name].js"
   },
   plugins: [
     // 打包的模板文件
@@ -21,12 +19,20 @@ module.exports = merge(commonConfig, {
       // 要打包的模板
       template: templateHTML,
       // 打包后的文件名
-      filename: "deploy_build.html",
+      filename: "test_build.html",
       // 指定引入哪个js文件
-      chunks: ["deployFile"]
-      // excludeChunks: ["devFile", "testFile"]
+      chunks: ["testFile"]
+      // excludeChunks: ["devFile", "deployFile"]
       // title: "哈哈哈",
       // favicon: ""
     })
   ]
+  // devServer: {
+  //   host: "localhost",
+  //   // 是否可以查看ip
+  //   // useLocalIp: true,
+  //   open: true,
+  //   port: 9000,
+  //   openPage: "./hjs.html"
+  // }
 });

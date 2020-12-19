@@ -1,4 +1,3 @@
-// 功能： 1、配置一个入口
 const path = require("path");
 const glob = require("glob");
 
@@ -14,6 +13,7 @@ srcPathFiles.forEach(item => {
 
 // 配置出口文件路径
 const out_path = path.resolve(__dirname, "../dist");
+
 module.exports = {
   entry: entrys,
   output: {

@@ -4,7 +4,7 @@
   "description": "webpack",
   "main": "index.js",
   "scripts": {
-    "test": "rimraf dist &&  webpack --config build/webpack.dev.js",
+    "test": "rimraf dist &&  webpack --config build/webpack.test.js",
     "build": "rimraf dist &&  webpack --config build/webpack.prod.js",
     "dev": "webpack-dev-server --config build/webpack.dev.js"
   },
