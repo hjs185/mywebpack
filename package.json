@@ -4,8 +4,7 @@
   "description": "webpack",
   "main": "index.js",
   "scripts": {
-    "test": "rimraf dist &&  webpack --config build/webpack.test.js",
-    "build": "rimraf dist &&  webpack --config build/webpack.prod.js",
+    "build": "rimraf dist && webpack --config build/webpack.prod.js",
     "dev": "webpack-dev-server --config build/webpack.dev.js"
   },
   "author": "",
@@ -17,11 +16,14 @@
     "@babel/preset-env": "7.12.1",
     "@babel/polyfill": "7.10.1",
     "babel-loader": "8.2.1",
-    "html-webpack-plugin": "4.0.3",
+    "html-webpack-plugin": "4.5.0",
     "webpack-dev-server": "3.3.1",
     "glob": "7.1.6",
     "webpack-merge": "5.7.0",
-    "path": "0.12.7"
+    "path": "0.12.7",
+    "ejs": "3.1.5",
+    "url-loader": "4.1.0",
+    "file-loader": "6.1.0"
   },
   "browserslist": [
     "> 1%",
