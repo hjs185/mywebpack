@@ -1,0 +1,12 @@
+body {
+  background: blue;
+}
+
+#img {
+  width: 500px;
+  height: 500px;
+  background-image: url(../img/echart.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(30deg);
+}

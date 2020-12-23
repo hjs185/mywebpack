@@ -32,9 +32,21 @@ module.exports = {
             name: "[name]_[hash:5].[ext]",
             // 打包后存放位置
             outputPath: "images/",
-            limit: 2000
+            limit: 2000,
+            // 打包后访问的相对路径 不加点是绝对路径（dist文件）
+            publicPath: "./images"
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          // 将计算后的样式加入页面
+          { loader: "style-loader" },
+          // 能够让你使用类似于@import和url的方法实现require()的功能
+          { loader: "css-loader" },
+          { loader: "postcss-loader" }
+        ]
       }
     ]
   }

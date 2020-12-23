@@ -21,7 +21,7 @@ module.exports = merge(commonConfig, {
     filename: "[name].[chunkhash:8].js"
   },
   plugins: [
-    // 打包的模板文件
+    // 编辑模板文件
     new HtmlWbpackPlugin({
       // 要打包的模板
       template: templateHTML,
