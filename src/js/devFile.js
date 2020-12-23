@@ -18,7 +18,7 @@ const myPromise = new Promise((resolve, reject) => {
 });
 console.log(myPromise);
 
-var isIn = [111, 234].includes(111);
+var isIn = [111, 234].includes("hjsaa");
 console.log(isIn);
 
 import img from "../img/echart.png";
