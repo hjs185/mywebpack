@@ -1,4 +1,5 @@
 // 开发环境入口文件
+// import "@babel/polyfill";
 let arr = [
   {
     name: "hjs"

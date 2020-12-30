@@ -6,12 +6,24 @@
         // polyfill通过useBuiltIns按需引入
         "useBuiltIns": "usage",
         // 必须声明corejs版本 否则babel将无效
-        "corejs": "2"
+        "corejs": "3"
       }
     ]
   ],
   "plugins": []
 }
+
+
+// @babel/preset-env 提供了一个 useBuiltIns 参数，
+// 设置值为 usage 时，就只会包含代码需要的 polyfill 。
+// 有一点需要注意：配置此参数的值为 usage ，
+// 必须要同时设置 corejs (如果不设置，会给出警告，默认使用的是"corejs": 2) ，
+// 注意: 这里仍然需要安装 @babel/polyfill(当前 @babel/polyfill 版本默认会安装 "corejs": 2):
+
+
+// 首先说一下使用 core-js@3 的原因，core-js@2 分支中已经不会再添加新特性，新特性都会添加到 core-js@3。
+// 例如你使用了 Array.prototype.flat()，如果你使用的是 core-js@2，那么其不包含此新特性。为了可以使用更多的新特性，建议大家使用 core-js@3
+
 
 
 
@@ -22,3 +34,14 @@
 
 // babel的作用只是桥梁  真正将es6/7语法转为es5语法是 @babel/preset-env 
 // 有些 @babel/preset-env是转不了的，比如includes Promise是不能转的，需要新的api @babel/polyfill来补充处理（babel7的功能）！
+
+
+
+// babel/core作用
+// babel-core 的作用是把js 代码分析成ast ，方便各个插件分析语法进行相应的处理。
+//  有些新语法在低版本js 中是不存在的，如箭头函数，rest 参数，函数默认值等，这种语言层面的不兼容只能通过将代码转为ast，分析其语法后再转为低版本js
+
+
+// core-js作用
+// core-js是完全模块化的javascript标准库。 
+//  它是一个完全模块化的库，所有的polyfill实现，都有一个单独的module文件，既可以一劳永逸地把所有polyfill全部引入，也可以根据需要，在自己项目的每个文件，单独引入需要的core-js的modules文件。
